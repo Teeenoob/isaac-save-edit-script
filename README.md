@@ -1,5 +1,5 @@
 > [!CAUTION]
-> copilot was used to make web
+> Copilot was used to make web, untested and no energy to fix + add other DLCs support
 
 # isaac-save-edit-script
 A script build in python for editing save files for the binding of isaac repentance.
