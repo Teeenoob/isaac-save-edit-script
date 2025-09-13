@@ -124,7 +124,7 @@ window.IsaacSave = {
     let area = document.getElementById('secretsArea');
     let values = this.getSecrets(this.data);
     area.innerHTML = "";
-    for(let i=0; i<641; ++i){
+    for(let i=0; i<637; ++i){
       let lbl = document.createElement('label');
       let cb = document.createElement('input');
       cb.type = "checkbox";
@@ -138,7 +138,7 @@ window.IsaacSave = {
   },
   unlockAllSecrets() {
     let all = [];
-    for(let i=1;i<=641;++i) all.push(i);
+    for(let i=1;i<=637;++i) all.push(i);
     this.data = this.updateSecrets(this.data, all);
     this.populateSecretsUI();
   },
@@ -341,13 +341,13 @@ window.IsaacSave = {
   getSecrets(data) {
     let secrets_data = [];
     let offs = this.offsets[0];
-    for(let i=1;i<=641;i++)
+    for(let i=1;i<=637;i++)
       secrets_data.push(this.getInt(data, offs+i, 1));
     return secrets_data;
   },
   updateSecrets(data, secret_list) {
     let arr = new Uint8Array(data);
-    for(let i=1;i<=641;i++)
+    for(let i=1;i<=637;i++)
       arr = this.alterSecret(arr, i, false);
     for(let i of secret_list)
       arr = this.alterSecret(arr, i, true);
