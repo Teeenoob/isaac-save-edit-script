@@ -1,3 +1,6 @@
+> [!CAUTION]
+> copilot was used to make web
+
 # isaac-save-edit-script
 A script build in python for editing save files for the binding of isaac repentance.
 This project was heavily inspired and relies on the source code for the afterbirth save editor found here:
