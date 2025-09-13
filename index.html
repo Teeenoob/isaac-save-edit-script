@@ -25,22 +25,34 @@
     </div>
     <div class="tab completion" hidden>
       <h2>Completion Marks</h2>
+      <label>Character:
+        <select id="completionChar"></select>
+      </label>
       <div id="completionMarksArea"></div>
+      <button id="unlockAllCompletion">Unlock All</button>
     </div>
     <div class="tab secrets" hidden>
       <h2>Secrets</h2>
       <div id="secretsArea"></div>
+      <button id="unlockAllSecrets">Unlock All</button>
     </div>
     <div class="tab items" hidden>
       <h2>Items</h2>
       <div id="itemsArea"></div>
+      <button id="unlockAllItems">Unlock All</button>
     </div>
     <div class="tab challenges" hidden>
       <h2>Challenges</h2>
       <div id="challengesArea"></div>
+      <button id="unlockAllChallenges">Unlock All</button>
     </div>
   </div>
   <button id="saveBtn" disabled>Save File</button>
+  <p>
+    <small>
+      All major features are ported.<br>
+    </small>
+  </p>
   <script src="isaac-save.js"></script>
   <script src="ui.js"></script>
 </body>

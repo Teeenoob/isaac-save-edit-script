@@ -1,6 +1,7 @@
 body {
   font-family: sans-serif;
   margin: 2em;
+  background: #faf9f8;
 }
 #tabs {
   margin-bottom: 1em;
@@ -20,5 +21,25 @@ body {
   display: block;
 }
 input[type="number"] {
-  width: 4em;
+  width: 5em;
+}
+#completionMarksArea label,
+#secretsArea label,
+#itemsArea label,
+#challengesArea label {
+  display: inline-block;
+  min-width: 200px;
+  margin-bottom: 3px;
+}
+#completionMarksArea,
+#secretsArea,
+#itemsArea,
+#challengesArea {
+  margin: 1em 0 1em 0;
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 0.5em;
+  background: #f7f7f7;
+  font-size: 0.95em;
 }

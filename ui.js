@@ -1,4 +1,4 @@
-// Simple tab logic
+// Tab logic
 document.querySelectorAll('.tab-btn').forEach(btn => {
   btn.onclick = () => {
     document.querySelectorAll('.tab').forEach(tab => tab.hidden = true);
@@ -6,7 +6,7 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
   };
 });
 
-// File open/save logic
+// File open/save
 const fileInput = document.getElementById('fileInput');
 const saveBtn = document.getElementById('saveBtn');
 let rawSaveData = null;
@@ -30,9 +30,36 @@ saveBtn.addEventListener('click', () => {
   a.click();
 });
 
-// UI hooks for Misc fields
+// Misc UI hooks
 ['winStreak', 'edenTokens', 'donationMachine', 'greedMachine'].forEach(id => {
-  document.getElementById(id).addEventListener('input', () => {
-    IsaacSave.updateFromUI();
-  });
+  document.getElementById(id).addEventListener('input', () => IsaacSave.updateFromUI());
 });
+
+// Completion marks UI
+document.getElementById('unlockAllCompletion').onclick = () => {
+  IsaacSave.unlockAllCompletion();
+  IsaacSave.populateCompletionUI();
+};
+document.getElementById('completionChar').onchange = () => IsaacSave.populateCompletionUI();
+document.getElementById('completionMarksArea').onchange = (e) => IsaacSave.updateFromUI();
+
+// Secrets UI
+document.getElementById('unlockAllSecrets').onclick = () => {
+  IsaacSave.unlockAllSecrets();
+  IsaacSave.populateSecretsUI();
+};
+document.getElementById('secretsArea').onchange = (e) => IsaacSave.updateFromUI();
+
+// Items UI
+document.getElementById('unlockAllItems').onclick = () => {
+  IsaacSave.unlockAllItems();
+  IsaacSave.populateItemsUI();
+};
+document.getElementById('itemsArea').onchange = (e) => IsaacSave.updateFromUI();
+
+// Challenges UI
+document.getElementById('unlockAllChallenges').onclick = () => {
+  IsaacSave.unlockAllChallenges();
+  IsaacSave.populateChallengesUI();
+};
+document.getElementById('challengesArea').onchange = (e) => IsaacSave.updateFromUI();
