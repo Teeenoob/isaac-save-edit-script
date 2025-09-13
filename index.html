@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Isaac Save Editor (Web Version)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Isaac Save Editor</h1>
+  <input type="file" id="fileInput" accept=".dat"><br>
+  <div id="tabs">
+    <button class="tab-btn" data-tab="misc">Misc</button>
+    <button class="tab-btn" data-tab="completion">Completion Marks</button>
+    <button class="tab-btn" data-tab="secrets">Secrets</button>
+    <button class="tab-btn" data-tab="items">Items</button>
+    <button class="tab-btn" data-tab="challenges">Challenges</button>
+  </div>
+  <div id="tab-content">
+    <div class="tab misc">
+      <h2>Misc</h2>
+      <label>Win Streak: <input type="number" id="winStreak"></label><br>
+      <label>Eden Tokens: <input type="number" id="edenTokens"></label><br>
+      <label>Donation Machine: <input type="number" id="donationMachine"></label><br>
+      <label>Greed Machine: <input type="number" id="greedMachine"></label><br>
+    </div>
+    <div class="tab completion" hidden>
+      <h2>Completion Marks</h2>
+      <div id="completionMarksArea"></div>
+    </div>
+    <div class="tab secrets" hidden>
+      <h2>Secrets</h2>
+      <div id="secretsArea"></div>
+    </div>
+    <div class="tab items" hidden>
+      <h2>Items</h2>
+      <div id="itemsArea"></div>
+    </div>
+    <div class="tab challenges" hidden>
+      <h2>Challenges</h2>
+      <div id="challengesArea"></div>
+    </div>
+  </div>
+  <button id="saveBtn" disabled>Save File</button>
+  <script src="isaac-save.js"></script>
+  <script src="ui.js"></script>
+</body>
+</html>
